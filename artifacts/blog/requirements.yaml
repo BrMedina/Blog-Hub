@@ -1,0 +1,11 @@
+packages:
+  "framer-motion": "For smooth, premium editorial page transitions and scroll animations"
+  "@tailwindcss/typography": "For styling the blog post prose content beautifully"
+  "clsx": "For conditional class joining"
+  "tailwind-merge": "For merging tailwind classes safely"
+
+images: []
+
+notes:
+  - This is a fully static frontend using hardcoded data as requested.
+  - The styling uses a warm, editorial aesthetic with Lora (serif) and DM Sans (sans-serif).
