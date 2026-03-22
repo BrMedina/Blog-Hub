@@ -19,10 +19,10 @@ export default function Home() {
           className="max-w-2xl mb-16 sm:mb-24"
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium leading-tight text-foreground mb-6">
-            Reflections on living, working, and discovering.
+            The Philippine Education Crisis
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground font-light">
-            A curated collection of stories exploring mindfulness, the future of work, and hidden corners of the world.
+            Walking through any busy street in the Philippines, especially in Manila, you would not help but notice kids selling sampaguita, cleaning windshields, sleeping below the stairway of the footbridge, and begging for money during school hours while the rest of us are in class. It is a harsh reality in which your family's income determines whether you attend a decent school or study under a street lamp.
           </p>
         </motion.div>
 

@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
             <Link href="/" className="font-serif text-2xl font-medium tracking-tight inline-block mb-4 hover:opacity-80 transition-opacity">
-              AURA.
+              EDUKASYON.
             </Link>
             <p className="text-background/60 max-w-sm font-light">
               A digital space dedicated to intentional living, thoughtful work, and meaningful exploration. 
@@ -35,7 +35,7 @@ export function Footer() {
         </div>
         
         <div className="border-t border-background/10 mt-16 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-background/40">
-          <p>© 2026 Aura Publications. All rights reserved.</p>
+          <p>© 2026 EDUKASYON Publications. All rights reserved.</p>
           <div className="flex gap-6 mt-4 sm:mt-0">
             <button className="hover:text-background transition-colors cursor-pointer">Privacy Policy</button>
             <button className="hover:text-background transition-colors cursor-pointer">Terms of Service</button>

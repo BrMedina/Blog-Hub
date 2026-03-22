@@ -8,7 +8,7 @@ export function Navbar() {
           href="/" 
           className="font-serif text-2xl font-medium tracking-tight text-foreground hover:opacity-70 transition-opacity"
         >
-          AURA.
+          EDUKASYON.
         </Link>
         
         <nav className="hidden sm:flex gap-8">
