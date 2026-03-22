@@ -6,6 +6,30 @@ import { PostCard } from "@/components/PostCard";
 export default function Home() {
   const featuredPost = posts[0];
   const regularPosts = posts.slice(1);
+  const crisisImageUrl = "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=1400";
+  const crisisImageAlt = "Filipino students in a classroom";
+  const proposals = [
+    {
+      title: "Fair wage to local professionals",
+      description:
+        "Nations should be wary of the wages of their professionals as they are the key to strengthening their educational system. As such, reforms on better wages to trained professionals in countries will open more opportunities for them and result in benefitting their country rather than another."
+    },
+    {
+      title: "Fund locally done projects",
+      description:
+        "Rather than countries relying on other countries’ educational systems, local systems to specifically combat educational inequality, like Project REINN by DOST-ASTI, should be given light and funded by their government which encourages a localized infrastructure."
+    },
+    {
+      title: "Improved curriculum",
+      description:
+        "Expand and modernize curriculum content so students gain stronger literacy, critical thinking, and practical competencies needed in present-day learning and work environments."
+    },
+    {
+      title: "Expanding and improving digital and physical infrastructure, especially in marginalized areas",
+      description:
+        "Improve access to classrooms, learning resources, devices, and stable internet so students in underserved communities receive equitable opportunities to learn and progress."
+    }
+  ];
 
   return (
     <main className="min-h-screen pt-12 pb-24">
@@ -16,14 +40,24 @@ export default function Home() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="max-w-2xl mb-16 sm:mb-24"
+          className="max-w-6xl mb-16 sm:mb-24"
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium leading-tight text-foreground mb-6">
-            The Philippine Education Crisis
+            <center>The Philippine Education Crisis</center>
           </h1>
-          <p className="text-lg sm:text-xl text-muted-foreground font-light">
-            Walking through any busy street in the Philippines, especially in Manila, you would not help but notice kids selling sampaguita, cleaning windshields, sleeping below the stairway of the footbridge, and begging for money during school hours while the rest of us are in class. It is a harsh reality in which your family's income determines whether you attend a decent school or study under a street lamp.
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+            <p className="text-lg sm:text-xl text-muted-foreground font-light m-0">
+              Walking through any busy street in the Philippines, especially in Manila, you cannot help but notice kids selling sampaguita, cleaning windshields, and begging for money during school hours while the rest of us are in class. It is a harsh reality in which your family's income determines whether you attend a decent school or study under a street lamp. This inequality is not merely a product of poverty — it is a symptom of a deeper, systemic crisis within Philippine education.
+              Despite decades of reforms, the country still faces problems of dropout rates, low literacy rates, and a workforce unprepared for the demands of the modern world. Globalization, however, has made the situation more complex. While it opens the doors to global knowledge, it also widens the gap between those who have access to it and those who do not. In the blogs that follow, we examine the state of education quality in the Philippines, the effects of globalization on our learning systems, and the trends shaping the future of our classrooms.
+            </p>
+            <div className="rounded-2xl overflow-hidden border border-border/60 shadow-2xl shadow-foreground/5">
+              <img
+                src={crisisImageUrl}
+                alt={crisisImageAlt}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </motion.div>
 
         {/* Featured Post */}
@@ -46,6 +80,34 @@ export default function Home() {
             <PostCard key={post.id} post={post} index={idx} />
           ))}
         </div>
+
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="mt-14 mb-4"
+        >
+          <p className="text-lg text-muted-foreground font-light leading-relaxed mb-8">
+            Education in this age, especially in an era when the Internet has made us more interconnected than ever, has fostered discussions and cooperation with others around the world, yet it has also made us more divided. As such, proposals to combat issues regarding the lack of education are in need, and the group has identified the following:
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
+            {proposals.map((proposal) => (
+              <article
+                key={proposal.title}
+                className="rounded-2xl border border-border bg-secondary/40 p-6"
+              >
+                <h4 className="font-serif text-xl font-medium mb-3 text-foreground">
+                  {proposal.title}
+                </h4>
+                <p className="text-muted-foreground leading-relaxed m-0">
+                  {proposal.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </motion.section>
         
         {/* Newsletter CTA */}
         <motion.section 

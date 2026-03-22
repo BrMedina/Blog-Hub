@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useRoute, Link } from "wouter";
 import { motion } from "framer-motion";
 import { ArrowLeft, Share2, Bookmark, Heart } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 import { posts } from "@/data/posts";
 import NotFound from "./not-found";
 
@@ -118,7 +119,7 @@ export default function BlogPost() {
           </p>
           
           {post.content.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
           ))}
         </motion.div>
 
