@@ -11,6 +11,8 @@ export interface BlogPost {
   date: string;
   tag: string;
   readTime: string;
+  thumbnailImageUrl?: string;
+  thumbnailImageAlt?: string;
   imageUrl: string;
   imageAlt: string;
 }
@@ -57,9 +59,11 @@ export const posts: BlogPost[] = [
     date: "February 28, 2026",
     tag: "Globalization",
     readTime: "15 min read",
-    // clean minimalist workspace
-    imageUrl: "https://cdn-wordpress-info.futurelearn.com/wp-content/uploads/philippines-fastest-growing-industries.jpg.optimal.jpg",
-    imageAlt: "A clean, minimalist desk setup with a laptop, notebook, and natural light"
+    // separate thumbnail and in-post image for this post
+    thumbnailImageUrl: "https://cdn-wordpress-info.futurelearn.com/wp-content/uploads/philippines-fastest-growing-industries.jpg.optimal.jpg",
+    thumbnailImageAlt: "Philippine industries and development visual for globalization",
+    imageUrl: "/pics/image.png",
+    imageAlt: "Street education session in the Philippines"
   },
   {
     id: "hidden-gems-southeast-asia",

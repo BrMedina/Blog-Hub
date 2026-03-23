@@ -91,20 +91,22 @@ export default function BlogPost() {
       </header>
 
       {/* Featured Image */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.98 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-        className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24"
-      >
-        <div className="aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl shadow-foreground/5">
-          <img 
-            src={post.imageUrl} 
-            alt={post.imageAlt}
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </motion.div>
+      {post.id !== "4-day-work-week" && (
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.98 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24"
+        >
+          <div className="aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden shadow-2xl shadow-foreground/5">
+            <img 
+              src={post.imageUrl} 
+              alt={post.imageAlt}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </motion.div>
+      )}
 
       {/* Article Content */}
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -117,10 +119,20 @@ export default function BlogPost() {
           <p className="lead text-xl sm:text-2xl text-foreground/80 font-serif italic mb-10">
             {post.excerpt}
           </p>
-          
+
           {post.content.map((paragraph, index) => (
             <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
           ))}
+
+          {post.id === "4-day-work-week" && (
+            <div className="mt-10 rounded-2xl overflow-hidden shadow-2xl shadow-foreground/5">
+              <img
+                src={post.imageUrl}
+                alt={post.imageAlt}
+                className="w-full h-auto"
+              />
+            </div>
+          )}
         </motion.div>
 
         {/* Post Footer Actions */}

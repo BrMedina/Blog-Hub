@@ -6,7 +6,7 @@ import { PostCard } from "@/components/PostCard";
 export default function Home() {
   const featuredPost = posts[0];
   const regularPosts = posts.slice(1);
-  const crisisImageUrl = "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=1400";
+  const crisisImageUrl = "https://childhope.org.ph/wp-content/uploads/2020/08/street-education-program.jpg";
   const crisisImageAlt = "Filipino students in a classroom";
   const proposals = [
     {
@@ -47,10 +47,10 @@ export default function Home() {
           </h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
             <p className="text-lg sm:text-xl text-muted-foreground font-light m-0">
-              Walking through any busy street in the Philippines, especially in Manila, you cannot help but notice kids selling sampaguita, cleaning windshields, and begging for money during school hours while the rest of us are in class. It is a harsh reality in which your family's income determines whether you attend a decent school or study under a street lamp. This inequality is not merely a product of poverty — it is a symptom of a deeper, systemic crisis within Philippine education.
-              Despite decades of reforms, the country still faces problems of dropout rates, low literacy rates, and a workforce unprepared for the demands of the modern world. Globalization, however, has made the situation more complex. While it opens the doors to global knowledge, it also widens the gap between those who have access to it and those who do not. In the blogs that follow, we examine the state of education quality in the Philippines, the effects of globalization on our learning systems, and the trends shaping the future of our classrooms.
+              Walking through any busy streets of Manila, you cannot help but notice children selling sampaguita, cleaning windshields, and begging for money during school hours while the rest of us are in class. It is a harsh reality where a family’s income determines whether a child attends a decent school or studies under a street lamp. This inequality is not merely a product of poverty — it is a symptom of a deeper, systemic crisis within Philippine education.
+              Despite decades of reforms, the country still faces high dropout rates, low literacy outcomes, and a workforce unprepared for the demands of the modern world. Globalization has made the situation more complex: while it opens doors to global knowledge, it also widens the gap between those who have access and those who do not. In the blogs that follow, we examine the state of education quality in the Philippines, the effects of globalization on our learning systems, and the trends shaping the future of our classrooms.
             </p>
-            <div className="rounded-2xl overflow-hidden border border-border/60 shadow-2xl shadow-foreground/5">
+            <div className="rounded-2xl overflow-hidden border border-border/60 shadow-2xl shadow-foreground/5 h-80 sm:h-96 lg:h-128 lg:translate-y-1">
               <img
                 src={crisisImageUrl}
                 alt={crisisImageAlt}

@@ -53,8 +53,8 @@ export function FeaturedPost({ post }: { post: BlogPost }) {
         <Link href={`/blog/${post.id}`} className="block relative aspect-[4/3] lg:aspect-square overflow-hidden rounded-2xl isolate focus:outline-none focus:ring-4 focus:ring-primary/20 focus:ring-offset-4 focus:ring-offset-background transition-all">
           <div className="absolute inset-0 bg-foreground/5 z-10 transition-colors group-hover:bg-transparent"></div>
           <img 
-            src={post.imageUrl} 
-            alt={post.imageAlt}
+            src={post.thumbnailImageUrl ?? post.imageUrl} 
+            alt={post.thumbnailImageAlt ?? post.imageAlt}
             className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
             loading="eager"
           />
