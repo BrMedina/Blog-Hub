@@ -43,7 +43,7 @@ export default function Home() {
           className="max-w-6xl mb-16 sm:mb-24"
         >
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium leading-tight text-foreground mb-6">
-            <center>The Philippine Education Crisis</center>
+            <center>Global Education Crisis; The Philippine Experience</center>
           </h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
             <p className="text-lg sm:text-xl text-muted-foreground font-light m-0">
