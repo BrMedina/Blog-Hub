@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
 import { posts } from "@/data/posts";
-import { FeaturedPost } from "@/components/FeaturedPost";
 import { PostCard } from "@/components/PostCard";
 
 export default function Home() {
-  const featuredPost = posts[0];
-  const regularPosts = posts.slice(1);
+  const regularPosts = posts;
   const crisisImageUrl = "https://childhope.org.ph/wp-content/uploads/2020/08/street-education-program.jpg";
   const crisisImageAlt = "Filipino students in a classroom";
   const proposals = [
@@ -60,9 +58,6 @@ export default function Home() {
           </div>
         </motion.div>
 
-        {/* Featured Post */}
-        <FeaturedPost post={featuredPost} />
-
         {/* Section Divider */}
         <motion.div 
           initial={{ opacity: 0 }}
@@ -71,7 +66,7 @@ export default function Home() {
           className="flex items-center gap-6 mb-12"
         >
           <h3 className="font-serif text-2xl font-medium m-0">Latest Stories</h3>
-          <div className="h-px bg-border flex-grow"></div>
+          <div className="h-px bg-border grow"></div>
         </motion.div>
 
         {/* Regular Posts Grid */}
@@ -82,12 +77,66 @@ export default function Home() {
         </div>
 
         <motion.section
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="mt-14"
+        >
+          <div className="h-px bg-border mb-10"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-start">
+            <div>
+              <h3 className="font-serif text-2xl sm:text-3xl font-medium leading-tight text-foreground mb-4">
+                SDG 4 Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all):
+              </h3>
+              <p className="text-lg text-muted-foreground font-light leading-relaxed m-0">
+                Achieving SDG 4 means ensuring that every learner, regardless of income, location, gender, or background, has access to safe schools, qualified teachers, relevant learning resources, and meaningful opportunities to continue learning throughout life. In the context of the global education crisis, this goal reminds us that reforms must not only improve quality, but also close gaps in access so no community is left behind.
+              </p>
+            </div>
+            <div className="rounded-2xl overflow-hidden border border-border/60 shadow-2xl shadow-foreground/5 h-80 sm:h-96 lg:h-112 lg:translate-y-1">
+              <img
+                src="https://sdgs.un.org/sites/default/files/2025-07/2025_SDG_Goal-Level_Social_Media_Cards_Goal_4_small.png"
+                alt="SDG 4 quality education goal card"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </motion.section>
+
+        <motion.section
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="mt-14 text-center"
+        >
+          <div className="h-px bg-border mb-10"></div>
+          <h3 className="font-serif text-2xl sm:text-3xl font-medium leading-tight text-foreground mb-6">
+            Is SDG 4 achievable by 2030 worldwide?
+          </h3>
+          <div className="max-w-4xl mx-auto space-y-5">
+            <p className="text-lg text-muted-foreground font-light leading-relaxed m-0">
+              While some might argue that achieving high-quality education worldwide is not fully attainable due to many persistent challenges like corruption and conflict, there is a remaining hope that gradual and consistent progress over time gives society a strong chance of eventually reaching this goal.
+            </p>
+            <p></p>
+            <p className="text-lg text-muted-foreground font-light leading-relaxed m-0">
+              In actuality, the likelihood of accomplishing SDG 4 is extremely low because of the many challenges associated with its implementation, particularly in developing countries. Corruption, armed conflict, poor planning, and a lack of resources are some of the factors that still impede progress. Government funds meant for education are mishandled in many areas, which leads to poor school infrastructure, a lack of educational resources, and underpaid teachers. Political unrest and ongoing hostilities further impede access to education by keeping kids out of school and destroying infrastructure. Furthermore, it is challenging to maintain improvements even after initiatives are launched due to inadequate long-term planning and poor policy execution. These obstacles make it more challenging for nations to achieve SDG 4 targets by 2030, especially in light of the country's fast population growth and enduring inequality.
+            </p>
+          </div>
+        </motion.section>
+
+        <motion.section
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
-          className="mt-14 mb-4"
+          className="mt-14 mb-4 text-center"
         >
+
+          <div className="h-px bg-border mb-10"></div>
+          <h3 className="font-serif text-2xl sm:text-3xl font-medium leading-tight text-foreground mb-6">
+            Moving Forward
+          </h3>
           <p className="text-lg text-muted-foreground font-light leading-relaxed mb-8">
             Education in this age, especially in an era when the Internet has made us more interconnected than ever, has fostered discussions and cooperation with others around the world, yet it has also made us more divided. As such, proposals to combat issues regarding the lack of education are in need, and the group has identified the following:
           </p>
@@ -131,7 +180,7 @@ export default function Home() {
               type="email" 
               placeholder="Your email address" 
               required
-              className="flex-grow h-12 px-5 rounded-full border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+              className="grow h-12 px-5 rounded-full border border-border bg-background focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
             />
             <button 
               type="submit"

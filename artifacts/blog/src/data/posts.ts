@@ -87,5 +87,28 @@ export const posts: BlogPost[] = [
     // lush southeast asia landscape
     imageUrl: "https://common.usembassy.gov/wp-content/uploads/sites/24/2022/12/12-09-2022-PR-U.S.-Philippines-Celebrate-Five-Years-of-Partnership-to-Improve-Filipino-Childrens-Reading-Skills-2-1024x576.jpg",
     imageAlt: "Stunning lush green mountains and a serene river in Southeast Asia"
+  },
+  {
+    id: "indonesian-perspective-global-educational-crisis",
+    title: "An Indonesian Perspective on Global Educational Crisis",
+    excerpt: "A regional perspective on the global educational crisis through Indonesia's experience with brain drain, the digital divide, and policy reforms.",
+    content: [
+      "Throughout this blog, we have primarily discussed the Philippines' experience with globalization's effects on the lack of quality education, or, rather, education in general. As our topic is globalization, other perspectives from nations must also be considered, so it is time to tell the Global Educational Crisis through the lens of Indonesia.",
+      "Indonesia, much like the Philippines, has reaped benefits and faced disadvantages from globalization's impact on education. Whilst there are positive changes, such as an overhaul of their educational system to a hybrid model of global standards and national priorities (Fadhi, 2022), they still face negative factors that the Philippines also faces, most notably the Digital Divide and brain drain.",
+      "According to Salma (2025), the brain drain crisis in Indonesia has been ongoing since the 1960s; most recently, 3,912 Indonesian citizens, mostly aged 25-35, have switched citizenship to Singapore. This leaves Indonesia with an economic disparity compared to countries that offer better opportunities for professional migrants looking to work and eventually settle in other nations, which, in turn, risks losing its high-quality professionals who can contribute to its economic and educational growth.",
+      "Regarding the Digital Divide, Subianto (n.d.) states that, whilst Indonesia has one of the fastest-growing digital economies in Southeast Asia, the percentage of adults in the country jumped from 11% in 2011 to 62% in 2021, yet this also means that 38% of Indonesian adults do not have internet access. As the world shifts entirely into the digital age, more than 1/4 of its population misses out on various educational resources that are easily accessible online.",
+      "There are various ways that the Indonesian government has coped with the Global Educational Crisis. The Merdeka Belajar Curriculum is one of these ways, which is a policy to enhance the flexibility and quality of education through an adaptive approach, such as project-based learning, customizable curricula, and no fixed national exams until Grade 12 (Hunaepi & Suharta, 2024). Other ways include higher government budgets, internationalizing universities for research/collaboration, private-sector involvement, and improved welfare.",
+      "Challenges still plague the Indonesian education system after these reforms, yet this does not mean we should lose hope altogether, moving forward toward a future in which an inclusive and universal education is attained for everyone, rich and poor."
+    ],
+    author: {
+      name: "Brent Medina",
+      avatarInitials: "BM",
+      role: "College Student"
+    },
+    date: "March 27, 2026",
+    tag: "Global Education",
+    readTime: "7 min read",
+    imageUrl: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1400&q=80",
+    imageAlt: "Students in a classroom learning environment"
   }
 ];
